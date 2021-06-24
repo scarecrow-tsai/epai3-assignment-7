@@ -3,6 +3,10 @@ import assignment
 
 
 def test_check_doc():
+    """
+    Test to check the check_docstring() function.
+    """
+
     def sample_correct():
         """
         This is docstring that is 50 characters long because why not hahahahahaha.
@@ -22,6 +26,9 @@ def test_check_doc():
 
 
 def test_fibonacci():
+    """
+    Test to check the fibonacci() function.
+    """
     fib = assignment.fibonacci()
     first = fib()
     second = fib()
@@ -53,7 +60,9 @@ def div(a, b):
 
 
 def test_global_counter():
-
+    """
+    Test to check the global_counter() function.
+    """
     counted_add = assignment.global_counter(add)
     counted_mul = assignment.global_counter(mul)
     counted_div = assignment.global_counter(div)
@@ -73,6 +82,9 @@ def test_global_counter():
 
 
 def test_param_counter():
+    """
+    Test to check the param_counter() function.
+    """
     counters = dict()
 
     counted_add = assignment.param_counter(add, counters)

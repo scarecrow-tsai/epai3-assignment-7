@@ -45,7 +45,7 @@ g_counters = dict()
 
 def global_counter(fn):
     """
-    A closure to keep a count of the number of times a function is called.
+    A closure to keep a count of the number of times a function is called using a global dictionary.
     """
     cnt = 0  # initially fn has been run zero times
 
@@ -62,6 +62,9 @@ def global_counter(fn):
 # Question 4
 ################################
 def param_counter(fn, counters):
+    """
+    A closure to keep a count of the number of times a function is called by passing a dictionary as an argument.
+    """
     cnt = 0
 
     def inner(*args, **kwargs):
