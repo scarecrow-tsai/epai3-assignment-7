@@ -74,6 +74,16 @@ def test_assignment_function_name_had_cap_letter():
         ), "You have used Capital letter(s) in your function names"
 
 
+def test_check_doc_freevar():
+    """
+    Test to check if free variable exists in check_doc() closure.
+    """
+
+    fn = assignment.check_doc()
+
+    assert fn.__code__.co_freevars[0] == "num_chars"
+
+
 def test_check_doc():
     """
     Test to check the check_docstring() function.

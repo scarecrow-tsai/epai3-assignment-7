@@ -5,9 +5,10 @@ def check_doc():
     """
     This closure is used to check if a function's docstring has more than 50 characters.
     """
+    num_chars = 50
 
     def inner(fn):
-        if len(" ".join(fn.__doc__.split())) >= 50:
+        if len(" ".join(fn.__doc__.split())) >= num_chars:
             return True
         else:
             return False

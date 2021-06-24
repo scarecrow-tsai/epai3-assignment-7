@@ -65,14 +65,18 @@ This file contains test functions.
 
     - Test to check the param_counter() function.
 
-### 5. `add(a, b)`
+### 5. `test_check_doc_freevar()`
+
+    - Test to check if free variable exists in check_doc() closure.
+
+### 6. `add(a, b)`
 
     - Function to add 2 numbers.
 
-### 6. `mul(a, b)`
+### 7. `mul(a, b)`
 
     - Function to multiply 2 numbers.
 
-### 7. `div(a, b)`
+### 8. `div(a, b)`
 
     - Function to divide 2 numbers.
