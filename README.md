@@ -1,49 +1,45 @@
-# Assignment 7
+# Assignment 9
 
-This repo contains files for the 7th assignment on closures.
+This repo contains files for the 9th assignment on named tuples.
 
 ## Lessons Covered
 
-The following concepts were covered.
-
-1. Global and Local Scopes
-2. Non Local Scopes
-3. Closures
-
 ## Assignment
 
-1. Write a closure that takes a function and then check whether the function passed has a docstring with more than 50 characters. 50 is stored as a free variable.
+1. Use the Faker (Links to an external site.)library to get 10000 random profiles. Using namedtuple, calculate the largest blood type, mean-current_location, oldest_person_age, and average age.
 
-2. Write a closure that gives you the next Fibonacci number.
+2. Do the same thing above using a dictionary. Prove that namedtuple is faster.
 
-3. We wrote a closure that counts how many times a function was called. Write a new one that can keep a track of how many times add/mul/div functions were called, and update a global dictionary variable with the counts.
+3. Create fake data (you can use Faker for company names) for imaginary stock exchange for top 100 companies (name, symbol, open, high, close). Assign a random weight to all the companies. Calculate and show what value the stock market started at, what was the highest value during the day, and where did it end. Make sure your open, high, close are not totally random. You can only use namedtuple.
 
-4. Modify above such that now we can pass in different dictionary variables to update different dictionaries.
+### create_prof(n: int) -> "namedtuple and dict":
 
-There are 2 files -
+    - Function to create profiles. Both decimal and namedtuple are created.
 
-1. `assignment.py` : this file contains all the actual code.
-2. `test_assignment.py` : this file contains all code to test the functions present in `assignment.py`.
+### get_mode_bloodgroup(obj_col: list, obj_type: str) -> "bloodgroup":
 
-## `assignment.py`
+    - Get the bloodgroup with highest frequency from a given
+    namedtuple or dict.
 
-This file contains 4 functions.
+### get_mean_location(obj_col: list, obj_type: str) -> "Decimal Coordinates":
 
-### 1. `check_doc()`
+    - Get mean x,y of all given coordinates.
 
-- This closure is used to check if a function's docstring has more than 50 characters.
+### get_max_age(obj_col: list, obj_type: str) -> "Max age":
 
-### 2. `fibonacci()`
+    - Function to obtain the max age given a namedtuple or dict.
 
-- This function generates the fibonacci sequence starting from 1.
+### get_avg_age(obj_col, obj_type: str) -> "Average age":
 
-### 3. `global_counter(fn)`
+    - Function to obtain the average age given a namedtuple or dict.
 
-- A closure to keep a count of the number of times a function is called using a global dictionary.
+### prefix_creator(name: str) -> str:
 
-### 4. `param_counter(fn, counters)`
+    - Function to create unique prefixes given a company name.
 
-- A closure to keep a count of the number of times a function is called by passing a dictionary as an argument.
+### create_company(n: int) -> "namedtuple":
+
+    - Function to create fake stock market data for n companies.
 
 ## `test_assignment.py`
 
@@ -69,14 +65,22 @@ This file contains test functions.
 
     - Test to check if free variable exists in check_doc() closure.
 
-### 6. `add(a, b)`
+### 6. `test_mode_bloodgroup()`
 
-    - Function to add 2 numbers.
+    - Test for the finding the most frequent blood group using tuple and dict.
 
-### 7. `mul(a, b)`
+### 7. test_max_age():
 
-    - Function to multiply 2 numbers.
+    - Test for finding max age using tuple and dict.
 
-### 8. `div(a, b)`
+### 8. test_mean_location():
 
-    - Function to divide 2 numbers.
+    - Test for finding the mean location using tuple and dict.
+
+### 9. test_avg_age():
+
+    - Test for finding the average age using tuple and dict.
+
+### 10. test_company_stock():
+
+    - Test for company stock question.
